@@ -1,10 +1,6 @@
-const child = ({ name, animal, breed }) => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, name),
-    React.createElement("h2", {}, animal),
-    React.createElement("p", {}, breed),
-  ]);
-};
+import React from 'react';
+import { render } from 'react-dom';
+import child from './child';
 
 const App = () => {
   return React.createElement("div", {}, [
@@ -29,4 +25,4 @@ const App = () => {
   ]);
 };
 
-ReactDOM.render(React.createElement(App), document.querySelector("#root"));
+render(React.createElement(App), document.querySelector("#root"));
